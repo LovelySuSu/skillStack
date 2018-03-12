@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三栏不定高布局</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <style>
+            .float_layout{
+                width: 100%;
+            }
+            .float_layout .left{
+                background: pink;
+                float: left;
+                width: 300px;
+            }
+            .float_layout .right{
+                background: plum;
+                float: right;
+                width: 300px;
+            }
+            .float_layout .middle{
+                background: palevioletred;
+                margin: 0 300px;
+            }
+        </style>
+        <article class="float_layout">
+            <div class="left">
+                <p>左侧部分</p>
+                <p>左侧部分</p>
+                <p>左侧部分</p>
+            </div>
+            <div class="right">
+                <p>右侧部分</p>
+                <p>右侧部分</p>
+                <p>右侧部分</p>
+            </div>
+            <div class="middle">
+                <p>我有好多好多文字哟</p>
+                <p>我有好多好多文字哟</p>
+                <p>我有好多好多文字哟</p>
+                <p>我有好多好多文字哟</p>
+                <p>我有好多好多文字哟</p>
+                <p>我有好多好多文字哟</p>
+            </div>
+        </article>
+    </section>
+    <section>
+        <style>
+            .position_layout{
+                width: 100%;
+                margin: 20px;
+            }
+            .position_layout .left{
+                width: 300px;
+                position: absolute;
+                left:0;
+                background: pink;
+            }
+            .position_layout .right{
+                width: 300px;
+                position: absolute;
+                right:0;
+                background: plum;
+            }
+            .position_layout .middle{
+                background: palevioletred;
+                position: absolute;
+                left:300px;
+                right: 300px;
+            }
+        </style>
+        <article class="position_layout">
+            <div class="left">
+                <p>左侧部分</p>
+                <p>左侧部分</p>
+                <p>左侧部分</p>
+            </div>
+            <div class="middle">
+                <p>我有好多好多文字哟</p>
+                <p>我有好多好多文字哟</p>
+                <p>我有好多好多文字哟</p>
+                <p>我有好多好多文字哟</p>
+                <p>我有好多好多文字哟</p>
+                <p>我有好多好多文字哟</p>
+            </div>
+            <div class="right">
+                <p>右侧部分</p>
+                <p>右侧部分</p>
+                <p>右侧部分</p>
+            </div>
+        </article>
+    </section>
+    <section>
+        <style>
+            .flex_layout{
+                display: flex;
+                width: 100%;
+                margin-top: 180px;
+            }
+            .flex_layout .left{
+                width: 300px;
+                background-color: pink;
+            }
+            .flex_layout .right{
+                width: 300px;
+                background: plum;
+            }
+            .flex_layout .middle{
+                flex: 1;
+                background: palevioletred;
+            }
+        </style>
+        <article class="flex_layout">
+            <div class="left">
+                <p>左侧部分</p>
+                <p>左侧部分</p>
+                <p>左侧部分</p>
+            </div>
+            <div class="middle">
+                <p>我有好多好多文字哟</p>
+                <p>我有好多好多文字哟</p>
+                <p>我有好多好多文字哟</p>
+                <p>我有好多好多文字哟</p>
+                <p>我有好多好多文字哟</p>
+                <p>我有好多好多文字哟</p>
+            </div>
+            <div class="right">
+                <p>右侧部分</p>
+                <p>右侧部分</p>
+                <p>右侧部分</p>
+            </div>
+        </article>
+    </section>
+    <section>
+        <style>
+            .table_layout{
+                width: 100%;
+                display: table;
+                margin-top: 20px;
+            }
+            .table_layout>div{
+                display: table-cell;
+            }
+            .table_layout .left{
+                width: 300px;
+                background-color: pink;
+            }
+            .table_layout .right{
+                width: 300px;
+                background-color: plum;
+            }
+            .table_layout .middle{
+                background: palevioletred;
+            }
+        </style>
+        <article class="table_layout">
+            <div class="left">
+                <p>左侧部分</p>
+                <p>左侧部分</p>
+                <p>左侧部分</p>
+            </div>
+            <div class="middle">
+                <p>我有好多好多文字哟</p>
+                <p>我有好多好多文字哟</p>
+                <p>我有好多好多文字哟</p>
+                <p>我有好多好多文字哟</p>
+                <p>我有好多好多文字哟</p>
+                <p>我有好多好多文字哟</p>
+            </div>
+            <div class="right">
+                <p>右侧部分</p>
+                <p>右侧部分</p>
+                <p>右侧部分</p>
+            </div>
+        </article>
+    </section>
+    <section>
+        <style>
+            .grid_layout{
+                margin-top: 20px;
+                width: 100%;
+                display: grid;
+                grid-template-columns: 300px auto 300px;
+            }
+            .grid_layout .left{
+                background: pink;
+            }
+            .grid_layout .right{
+                background: plum;
+            }
+            .grid_layout .middle{
+                background: palevioletred;
+            }
+        </style>
+        <article class="grid_layout">
+            <div class="left">
+                <p>左侧部分</p>
+                <p>左侧部分</p>
+                <p>左侧部分</p>
+            </div>
+            <div class="middle">
+                <p>我有好多好多文字哟</p>
+                <p>我有好多好多文字哟</p>
+                <p>我有好多好多文字哟</p>
+                <p>我有好多好多文字哟</p>
+                <p>我有好多好多文字哟</p>
+                <p>我有好多好多文字哟</p>
+            </div>
+            <div class="right">
+                <p>右侧部分</p>
+                <p>右侧部分</p>
+                <p>右侧部分</p>
+            </div>
+        </article>
+    </section>
+</body>
+</html>

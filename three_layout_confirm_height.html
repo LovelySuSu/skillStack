@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三栏定高布局</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .left{
+            height: 100px;
+            width: 300px;
+            background-color: pink;
+        }
+        .right{
+            height: 100px;
+            width: 300px;
+            background-color: plum;
+        }
+        .middle{
+            height: 100px;
+            background-color: palevioletred;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <style>
+            .float_layout{
+                height: 100px;
+            }
+            .float_layout .left{
+                float: left;
+            }
+            .float_layout .right{
+                float: right;
+            }
+            .float_layout .middle{
+                margin: 0 300px;
+            }
+        </style>
+        <article class="float_layout">
+            <div class="left"></div>
+            <div class="right"></div>
+            <div class="middle">
+                这是一个浮动定高布局
+            </div>
+        </article>
+    </section>
+
+    <section>
+        <style>
+            .position_layout{
+                margin-top: 20px;
+            }
+            .position_layout .left{
+                position: absolute;
+                left:0;
+            }
+            .position_layout .right{
+                position: absolute;
+                right:0;
+            }
+            .position_layout .middle{
+                position: absolute;
+                left:300px;
+                right: 300px;
+            }
+        </style>
+        <article class="position_layout">
+            <div class="left"></div>
+            <div class="right"></div>
+            <div class="middle">
+                这是一个绝对定位定高布局
+            </div>
+        </article>
+    </section>
+
+    <section>
+        <style>
+            .flex_layout{
+                margin-top: 140px;
+                display: flex;
+            }
+            .flex_layout .middle{
+                flex: 1;
+            }
+        </style>
+        <article class="flex_layout">
+            <div class="left"></div>
+            <div class="middle">
+                这是一个弹性盒子定高布局
+            </div>
+            <div class="right"></div>
+        </article>
+    </section>
+
+    <section>
+        <style>
+            .table_layout{
+                margin-top: 20px;
+                width: 100%;
+                display: table;
+            }
+            .table_layout > div{
+                display: table-cell;
+            }
+        </style>
+        <article class="table_layout">
+            <div class="left"></div>
+            <div class="middle">
+                这是一个表格定高布局
+            </div>
+            <div class="right"></div>
+        </article>
+    </section>
+
+    <section>
+        <style>
+            .grid_layout{
+                width: 100%;
+                margin-top: 20px;
+                display: grid;
+                grid-template-columns: 300px auto 300px;
+            }
+        </style>
+        <article class="grid_layout">
+            <div class="left"></div>
+            <div class="middle">
+                这是一个网格定高布局
+            </div>
+            <div class="right"></div>
+        </article>
+    </section>
+</body>
+</html>
