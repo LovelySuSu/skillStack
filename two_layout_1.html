@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>两栏布局左边固定</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <!--使用float布局-->
+    <section>
+        <style>
+            .float_layout{
+                width: 100%;
+            }
+            .float_layout .left{
+                float: left;
+                width: 300px;
+                height: 100px;
+                background: pink;
+            }
+            .float_layout .right{
+                width: 100%;
+                background: plum;
+                margin-left: 300px;
+                height: 100px;
+            }
+        </style>
+        <article class="float_layout">
+            <div class="left"></div>
+            <div class="right"></div>
+        </article>
+    </section>
+    <!--使用position布局-->
+    <section>
+        <style>
+            .position_layout{
+                width: 100%;
+                margin-top:10px;
+            }
+            .position_layout .left{
+                position:absolute;
+                width: 300px;
+                height: 100px;
+                left:0px;
+                background: pink;
+            }
+            .position_layout .right{
+                right: 0px;
+                left:300px;
+                height: 100px;
+                background: plum;
+            }
+        </style>
+        <article class="position_layout">
+            <div class="left"></div>
+            <div class="right"></div>
+        </article>
+    </section>
+    <!--使用flex布局-->
+    <section>
+        <style>
+            .flex_layout{
+                display: flex;
+                width: 100%;
+                margin-top:10px;
+            }
+            .flex_layout .left{
+                width: 300px;
+                height: 100px;
+                background: pink;
+            }
+            .flex_layout .right{
+                flex:1;
+                height: 100px;
+                background: plum;
+            }
+        </style>
+        <article class="flex_layout">
+            <div class="left"></div>
+            <div class="right"></div>
+        </article>
+    </section>
+    <!--使用table布局-->
+    <section>
+        <style>
+            .table_layout{
+                display: table;
+                width: 100%;
+                margin-top:10px;
+            }
+            .table_layout .left{
+                display: table-cell;
+                width: 300px;
+                height: 100px;
+                background: pink;
+            }
+            .table_layout .right{
+                display: table-cell;
+                height: 100px;
+                background: plum;
+            }
+        </style>
+        <article class="table_layout">
+            <div class="left"></div>
+            <div class="right"></div>
+        </article>
+    </section>
+    <!--使用grid布局-->
+    <section>
+        <style>
+            .grid_layout{
+                display: grid;
+                width: 100%;
+                height: 100px;
+                margin-top: 10px;
+                grid-template-columns: 300px auto;
+            }
+            .grid_layout .left{
+                background: pink;
+            }
+            .grid_layout .right{
+                background: plum;
+            }
+        </style>
+        <article class="grid_layout">
+            <div class="left"></div>
+            <div class="right"></div>
+        </article>
+    </section>
+</body>
+</html>

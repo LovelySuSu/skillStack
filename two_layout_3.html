@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>两栏布局上方固定</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body,section{
+            height: 100%;
+        }
+        section{
+            float: left;
+        }
+        .up{
+            background: pink;
+            width: 150px;
+        }
+        .down{
+            background: plum;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+<!--使用flex布局-->
+<section>
+    <style>
+        .flex_layout{
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            width: 150px;
+        }
+        .flex_layout .up{
+            height: 100px;
+            background: pink;
+        }
+        .flex_layout .down{
+            flex:1;
+            background: plum;
+        }
+    </style>
+    <article class="flex_layout">
+        <div class="up"></div>
+        <div class="down"></div>
+    </article>
+</section>
+<!--使用table布局-->
+<section>
+    <style>
+        .table_layout{
+            display: table;
+            width: 150px;
+            height: 100%;
+            margin-left:10px;
+        }
+        .table_layout .up{
+            display: table-row;
+            height: 100px;
+            background: pink;
+        }
+        .table_layout .down{
+            display: table-row;
+            background: plum;
+        }
+    </style>
+    <article class="table_layout">
+        <div class="up"><div></div></div>
+        <div class="down"><div></div></div>
+    </article>
+</section>
+<!--使用grid布局-->
+<section>
+    <style>
+        .grid_layout{
+            display: grid;
+            width: 100%;
+            height: 100%;
+            margin-left: 10px;
+            grid-template-rows: 100px auto;
+        }
+        .grid_layout .right{
+            background: pink;
+        }
+        .grid_layout .left{
+            background: plum;
+        }
+    </style>
+    <article class="grid_layout">
+        <div class="up"></div>
+        <div class="down"></div>
+    </article>
+</section>
+<!--使用position布局-->
+<section>
+    <style>
+        .position_layout{
+            height: 100%;
+            position: relative;
+            margin-left: 10px;
+        }
+        .position_layout .up{
+            position:absolute;
+            height: 100px;
+            top:0px;
+            background: pink;
+        }
+        .position_layout .down{
+            position:absolute;
+            top:100px;
+            bottom: 0px;
+        }
+    </style>
+    <article class="position_layout">
+        <div class="up"></div>
+        <div class="down"></div>
+    </article>
+</section>
+</body>
+</html>
