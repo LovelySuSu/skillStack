@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>圣杯布局</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            padding: 0 150px;
+        }
+        .container::after{
+            content:'';
+            display: block;
+            clear: both;
+        }
+        .container>div{
+            position: relative;
+            float: left;
+            height: 300px;
+        }
+        .container .middle{
+            background: palevioletred;
+            width: 100%;
+        }
+        .container .left{
+            background: pink;
+            margin-left: -100%;
+            left:-150px;
+            width: 150px;
+        }
+        .container .right{
+            background: plum;
+            width: 150px;
+            margin-left: -150px;
+            right:-150px
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="middle">
+            <p>我是圣杯布局</p>
+        </div>
+        <div class="left">
+            我是左边的部分哟呼
+        </div>
+        <div class="right">
+            我是右边的部分哟呼
+        </div>
+    </div>
+</body>
+</html>
