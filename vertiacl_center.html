@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>垂直居中</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        section{
+            height: 200px;
+            width: 100%;
+            margin-top: 10px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <style>
+            .container1{
+                line-height: 200px;
+                background: pink;
+            }
+        </style>
+        <div class="container1">通过line-height实现垂直居中,对单行文本有效</div>
+    </section>
+    <section>
+        <style>
+            .container2{
+                width: 100%;
+                height:100px;
+                background: yellowgreen;
+                position: relative;
+                margin-bottom:50%;
+                bottom:-50px;
+            }
+        </style>
+        <div class="container2">通过相对定位</div>
+    </section>
+    <section style="position: relative;">
+        <style>
+            .container3{
+                width: 100%;
+                height:100px;
+                background: orangered;
+                position: absolute;
+                top:0;
+                bottom: 0;
+                margin: auto 0;
+            }
+        </style>
+        <div class="container3">通过绝对定位</div>
+    </section>
+    <div style="margin-top: 10px"></div>
+    <section style="display: table-cell;vertical-align: middle;">
+        <style>
+            .container4{
+                width: 100%;
+                height:100px;
+                background: powderblue;
+            }
+        </style>
+        <div class="container4">通过table布局</div>
+    </section>
+    <section style="display: flex;align-items: center">
+        <style>
+            .container5{
+                width: 100%;
+                height: 100px;
+                flex:1;
+                background: bisque;
+            }
+        </style>
+        <div class="container5">通过flex布局</div>
+    </section>
+    <section style="display: grid;">
+        <style>
+            .container6{
+                width: 100%;
+                height: 100px;
+                align-self:center;
+                background: thistle;
+            }
+        </style>
+        <div class="container6">通过grid布局</div>
+    </section>
+</body>
+</html>

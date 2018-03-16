@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>水平居中</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <style>
+            .container1{
+                width: 300px;
+                height: 200px;
+                background: pink;
+                margin: 0 auto;
+            }
+        </style>
+        <div class="container1">利用margin实现居中</div>
+    </section>
+    <section style="margin-top: 20px">
+        <style>
+            .container2{
+                width: 300px;
+                height: 200px;
+                position: relative;
+                background: yellowgreen;
+                margin-left: 50%;
+                left:-150px;
+            }
+        </style>
+        <div class="container2">利用postion-相对布局实现居中</div>
+    </section>
+    <section style="margin-top: 20px">
+        <style>
+            .container3{
+                width: 300px;
+                height: 200px;
+                display: inline-block;
+                background: orangered;
+            }
+        </style>
+        <div style="text-align: center">
+            <div class="container3">利用inline-block实现居中</div>
+        </div>
+    </section>
+    <section style="margin-top: 20px">
+        <style>
+            .container4{
+                width: 300px;
+                height: 200px;
+                background: powderblue;
+            }
+        </style>
+        <div style="display: flex;justify-content:center;">
+            <div class="container4">利用flex实现居中</div>
+        </div>
+    </section>
+    <section style="margin-top: 20px">
+        <style>
+            .container5{
+                width: 300px;
+                height: 200px;
+                position: absolute;
+                background: bisque;
+                left:0;
+                right:0;
+                margin: auto;
+            }
+        </style>
+        <div class="container5">利用postion-绝对布局实现居中</div>
+    </section>
+</body>
+</html>
